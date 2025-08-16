@@ -95,8 +95,8 @@ export default function LandingPage() {
 
             {/* Footer */}
             <footer className="text-center py-6 text-sm border-t-4 border-black">
-                © {new Date().getFullYear()} CLYN Apparel & Goods. All rights
-                reserved.
+                © {new Date().getFullYear()} Lyn Store Apparel & Goods. All
+                rights reserved.
             </footer>
         </main>
     );
