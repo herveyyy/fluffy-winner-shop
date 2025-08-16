@@ -6,6 +6,9 @@ import GoToTop from "@/components/molecules/GoToTopBTN";
 import HeroImage from "@/components/molecules/HeroImage";
 import HeroSection from "@/components/organisms/HeroSection";
 import { Button } from "@/components/ui/button";
+import { FacebookIcon } from "lucide-react";
+import Link from "next/link";
+import { FaFacebook } from "react-icons/fa";
 
 export default function LandingPage() {
     return (
@@ -60,16 +63,73 @@ export default function LandingPage() {
                         </div>
                     ))}
                 </div>
-
-                <CoreButton className="mt-12 bg-pink-400 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] text-black font-bold px-8 py-4 uppercase">
-                    Subscribe
-                </CoreButton>
             </section>
 
+            <section className="px-6 md:px-12 py-24 flex flex-col items-center justify-center text-center bg-blue-200 border-t-4 border-black">
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase mb-6">
+                    Contact Us
+                </h2>
+                <p className="text-lg md:text-xl max-w-xl mb-6">
+                    Got questions? We’re here to help. Message us directly on
+                    Facebook for the fastest response.
+                </p>
+                <CoreButton
+                    color="blue"
+                    size="2xl"
+                    className="text-xl font-bold "
+                    asChild
+                >
+                    <Link
+                        href="https://www.facebook.com/lyn.cabig.mapano" // replace with your actual page link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Message Us on Facebook
+                    </Link>
+                </CoreButton>
+            </section>
+            <section className="px-6 md:px-12 py-16 bg-yellow-200 border-t-4 border-b-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-center mb-8">
+                    Delivery Spots in CDO
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    {/* Spot 1 */}
+                    <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] p-6 flex flex-col items-center text-center">
+                        <div className="w-full h-40 bg-yellow-100 border-2 border-black mb-4 flex items-center justify-center">
+                            <span className="font-bold uppercase">
+                                SM Downtown Image
+                            </span>
+                        </div>
+                        <h3 className="text-2xl font-extrabold uppercase mb-2">
+                            SM Downtown
+                        </h3>
+                        <p>
+                            Pick up your orders conveniently at SM Downtown
+                            Cagayan de Oro.
+                        </p>
+                    </div>
+
+                    {/* Spot 2 */}
+                    <div className="bg-white border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] p-6 flex flex-col items-center text-center">
+                        <div className="w-full h-40 bg-yellow-100 border-2 border-black mb-4 flex items-center justify-center">
+                            <span className="font-bold uppercase">
+                                Other Spot Image
+                            </span>
+                        </div>
+                        <h3 className="text-2xl font-extrabold uppercase mb-2">
+                            Other Spot
+                        </h3>
+                        <p>
+                            Another convenient location for Lyn Store
+                            deliveries.
+                        </p>
+                    </div>
+                </div>
+            </section>
             {/* Footer */}
             <footer className="text-center py-6 text-sm border-t-4 border-black">
-                © {new Date().getFullYear()} Lyn Store Apparel & Goods. All
-                rights reserved.
+                © {new Date().getFullYear()} Apparel & Goods. All rights
+                reserved.
             </footer>
         </main>
     );

@@ -32,6 +32,7 @@ export default function GoToTop() {
         isVisible && (
             <CoreButton
                 onClick={scrollToTop}
+                size={"icon"}
                 className="fixed bottom-6 right-6 z-50 flex items-center justify-center"
             >
                 <ArrowUp className="w-6 h-6 text-black" />
