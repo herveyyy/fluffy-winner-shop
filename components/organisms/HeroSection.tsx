@@ -32,7 +32,7 @@ const HeroSection = (props: Props) => {
             <div className="mt-10 md:mt-0 md:ml-8 w-full md:w-1/2">
                 <HeroImage
                     src={
-                        "https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg"
+                        "https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg"
                     }
                     alt={"hero image"}
                     caption=""

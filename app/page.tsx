@@ -1,12 +1,9 @@
-"use client";
-
 import CoreButton from "@/components/atoms/CoreButton";
 import FeaturedList from "@/components/molecules/FeaturedList";
 import GoToTop from "@/components/molecules/GoToTopBTN";
 import HeroImage from "@/components/molecules/HeroImage";
 import HeroSection from "@/components/organisms/HeroSection";
 import { Button } from "@/components/ui/button";
-import { FacebookIcon } from "lucide-react";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 
@@ -24,14 +21,17 @@ export default function LandingPage() {
                     {
                         title: "Apparel",
                         desc: "Premium T-Shirts, hoodies, and outerwear designed for comfort and style.",
+                        url: "/featured1.jpeg",
                     },
                     {
                         title: "Accessories",
                         desc: "Bags, caps, and everyday add-ons to elevate your lifestyle.",
+                        url: "/featured2.jpg",
                     },
                     {
                         title: "Lifestyle Goods",
                         desc: "Curated essentials blending utility with bold design.",
+                        url: "/featured3.jpg",
                     },
                 ]}
             />

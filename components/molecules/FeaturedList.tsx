@@ -4,6 +4,7 @@ import FeaturedCard from "../atoms/FeaturedCard";
 type FeaturedItem = {
     title: string;
     desc: string;
+    url: string;
 };
 
 type Props = {
@@ -18,6 +19,7 @@ const FeaturedList: React.FC<Props> = ({ items }) => {
                     key={i}
                     i={i}
                     item={{
+                        imageUrl: item.url,
                         title: item.title,
                         desc: item.desc,
                     }}
