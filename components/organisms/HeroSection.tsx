@@ -8,6 +8,7 @@ const HeroSection = (props: Props) => {
     return (
         <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-24 border-b-4 border-black bg-gradient-to-r from-yellow-200 to-pink-200">
             {/* Hero Content */}
+
             <div className="max-w-xl">
                 <h1 className="text-4xl md:text-6xl font-extrabold uppercase leading-tight mb-6 tracking-tight">
                     Mall-Quality Apparel <br /> & Everyday Goods
@@ -29,14 +30,22 @@ const HeroSection = (props: Props) => {
             </div>
 
             {/* Hero Image */}
-            <div className="mt-10 md:mt-0 md:ml-8 w-full md:w-1/2">
+            <div className="mt-10 relative  md:mt-0 md:ml-8 w-full md:w-1/2">
                 <HeroImage
                     src={
                         "https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg"
                     }
                     alt={"hero image"}
                     caption=""
-                />
+                />{" "}
+                <div className="absolute right-0">
+                    {" "}
+                    <p className="mt-12 text-lg md:text-xl font-bold  border-2 border-black bg-white p-4 shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded">
+                        Cash on Delivery available for{" "}
+                        <span className="uppercase">CDO Downtown</span>{" "}
+                        customers only.
+                    </p>
+                </div>
             </div>
         </section>
     );
