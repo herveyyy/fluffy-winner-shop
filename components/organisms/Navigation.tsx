@@ -4,6 +4,8 @@ import { useState } from "react";
 import NavigationList from "../molecules/NavigationList";
 import { Menu, ShoppingCart, X, User } from "lucide-react";
 import CoreButton from "../atoms/CoreButton";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Props = {
     user: boolean;
@@ -11,9 +13,14 @@ type Props = {
 
 export default function Navigation({ user }: Props) {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 w-full border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] bg-white">
+        <nav
+            className={`${
+                pathname === "/login" ? "hidden" : ""
+            } fixed top-0 left-0 right-0 z-50 w-full border-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)] bg-white`}
+        >
             <div className="flex items-center justify-between px-6 py-3">
                 {/* Logo */}
                 <div className="text-2xl font-extrabold uppercase tracking-wider bg-yellow-300 px-3 py-1 border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,1)]">
@@ -31,9 +38,11 @@ export default function Navigation({ user }: Props) {
 
                     {/* Auth button (mobile only) */}
                     {!user ? (
-                        <CoreButton className="md:hidden border-2 bg-green-300 px-2 py-1">
-                            Login
-                        </CoreButton>
+                        <Link href={"/login"} className="cursor-pointer">
+                            <CoreButton className="md:hidden border-2 bg-green-300 px-2 py-1">
+                                Login
+                            </CoreButton>
+                        </Link>
                     ) : (
                         <CoreButton className="md:hidden border-2 bg-purple-300 px-2 py-1">
                             <User className="size-4" />
@@ -62,9 +71,11 @@ export default function Navigation({ user }: Props) {
                             </CoreButton>
                         </>
                     ) : (
-                        <CoreButton className="border-2 border-black bg-green-300 px-4 py-2 font-bold">
-                            Login
-                        </CoreButton>
+                        <Link href={"/login"} className="cursor-pointer">
+                            <CoreButton className="border-2 border-black bg-green-300 px-4 py-2 font-bold">
+                                Login
+                            </CoreButton>
+                        </Link>
                     )}
                 </div>
             </div>
