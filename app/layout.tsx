@@ -16,7 +16,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${font.className}  antialiased`}>
-                <Navigation user={false} />
+                <Navigation user={true} />
                 <main className="">{children}</main>
             </body>
         </html>

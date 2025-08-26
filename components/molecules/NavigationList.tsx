@@ -52,7 +52,7 @@ const NavigationList = () => {
                         <CoreButton asChild className="w-full md:w-auto">
                             <Link
                                 href={item.href}
-                                className="flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-primary transition w-full"
+                                className="flex items-center justify-center md:justify-start gap-2  hover:text-primary transition w-full"
                             >
                                 {item.icon}
                                 <span className="text-base md:text-lg lg:text-xl font-bold">
@@ -63,7 +63,7 @@ const NavigationList = () => {
                     ) : (
                         <CoreButton
                             onClick={item.onClick}
-                            className="w-full md:w-auto flex items-center justify-center md:justify-start gap-2 text-gray-700 hover:text-red-600 transition"
+                            className="w-full md:w-auto flex items-center justify-center md:justify-start gap-2  hover:text-red-600 transition"
                         >
                             {item.icon}
                             <span className="text-base md:text-lg lg:text-xl font-bold">
