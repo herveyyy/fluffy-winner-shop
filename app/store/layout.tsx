@@ -5,7 +5,7 @@ type Props = {
 };
 
 const layout = (props: Props) => {
-    return <div className=" h-[calc(100vh-80px)]">{props.children}</div>;
+    return <div className=" ">{props.children}</div>;
 };
 
 export default layout;
