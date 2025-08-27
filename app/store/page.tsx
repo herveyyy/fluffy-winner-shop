@@ -53,7 +53,7 @@ const StorePage = () => {
         <main className=" relative min-h-screen mt-20 px-4 md:px-12 py-12 bg-pink-300 border-t-4 border-b-4 border-black shadow-[6px_6px_0px_rgba(0,0,0,1)]">
             {/* Heading */}
             <header
-                className="relative mb-12 text-center h-[60vh] flex flex-col items-center justify-center bg-cover  bg-center bg-no-repeat"
+                className="relative mb-12 text-center h-[60vh] flex flex-col items-center justify-center bg-cover  bg-center bg-no-repeat border-black shadow-[6px_6px_0px_rgba(0,0,0,1)]"
                 style={{
                     backgroundImage:
                         "url('https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg')",
